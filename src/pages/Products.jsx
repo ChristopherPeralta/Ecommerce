@@ -1,3 +1,11 @@
+import { ProductList } from "../components/ProductoCard/ProductList"
+
 export function Products() {
-    return (<h1>Products</h1>);
+    return (
+
+      <div>
+        <ProductList />
+      </div>
+
+    )
   }
