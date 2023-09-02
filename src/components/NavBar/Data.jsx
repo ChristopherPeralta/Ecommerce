@@ -29,14 +29,14 @@ export const Data = [
       icon: <FaIcons.FaCartPlus />,
       cName: "nav-text",
     },
-
+/*
     {
       title: "Carrito",
       path: "/carrito",
       icon: <FaIcons.FaShoppingCart />,
       cName: "nav-text",
     },
-
+*/
     {
       title: "Contacto",
       path: "/contacto",

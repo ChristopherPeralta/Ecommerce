@@ -1,11 +1,34 @@
-import { ProductList } from "../components/ProductoCard/ProductList"
+import {ProductList} from "../components/ProductList"
+import { Header } from '../components/Header';
+
+import React, { useState } from 'react';
 
 export function Products() {
-    return (
 
-      <div>
-        <ProductList />
-      </div>
+  const [allProducts, setAllProducts] = useState([]);
+	const [total, setTotal] = useState(0);
+	const [countProducts, setCountProducts] = useState(0);
 
-    )
-  }
+  return (
+		<>
+			<Header
+				allProducts={allProducts}
+				setAllProducts={setAllProducts}
+				total={total}
+				setTotal={setTotal}
+				countProducts={countProducts}
+				setCountProducts={setCountProducts}
+				
+			/>
+			<ProductList
+				allProducts={allProducts}
+				setAllProducts={setAllProducts}
+				total={total}
+				setTotal={setTotal}
+				countProducts={countProducts}
+				setCountProducts={setCountProducts}
+				
+			/>
+		</>
+	);
+}

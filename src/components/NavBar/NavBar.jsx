@@ -14,7 +14,12 @@ import {Data} from "./Data"
   export function NavBar() {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
+    const [searchQuery, setSearchQuery] = useState('');
   
+    const handleSearch = (event) => {
+      setSearchQuery(event.target.value);
+  };
+
     return (
       <div>
         <IconContext.Provider value={{ color: "#fff" }}>
@@ -32,26 +37,27 @@ import {Data} from "./Data"
             
 
                 <div className="SearchBar">
-                  <div className="SearchBar-module">
-                    <input
-                      autoComplete="off"
-                      className="SearchBar-module_searchBar"
-                      id="testId-SearchBar-Input"
-                      tabIndex="-1"
-                      type="text"
-                      placeholder="Buscar en la tienda"
-                      value=""
-                    />
-                  </div>
-                  <button className="SearchBar-module_searchBtnIcon">
-                    <AiIcons.AiOutlineSearch />
-                  </button>
-                </div>
+    <div className="SearchBar-module">
+        <input
+            autoComplete="off"
+            className="SearchBar-module_searchBar"
+            id="testId-SearchBar-Input"
+            tabIndex="-1"
+            type="text"
+            placeholder="Buscar en la tienda"
+            value={searchQuery}
+            onChange={handleSearch} // Llama a la función de búsqueda al escribir
+        />
+            </div>
+            <button className="SearchBar-module_searchBtnIcon">
+                <AiIcons.AiOutlineSearch />
+            </button>
+        </div>
       
                 <div className="Carrito">
-                <button className="Carrito-CarritoIcon">
+                <Link to="/products" className="Carrito-CarritoIcon">
                     <BsIcons.BsCart3 />
-                  </button>
+                  </Link>
                 </div>
               </div>
                  

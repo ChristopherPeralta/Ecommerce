@@ -1,4 +1,10 @@
 export function Nosotros() {
-
-    return (<h1>Nosotros</h1>);
+    return (
+            <h1>Nosotros</h1>                
+    );
 }
+
+
+
+
+

@@ -14,10 +14,12 @@ export function MyRoutes() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/products" element={<Products />} />
+        <Route exact path="/products/:position" element={<Products />} />
         <Route exact path="/carrito" element={<Carrito/>} />
         <Route exact path="/nosotros" element={<Nosotros/>} />
         <Route exact path="/contacto" element={<Contacto/>} />
       </Routes>
     </BrowserRouter>
+    
   );
 }
